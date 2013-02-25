@@ -24,6 +24,13 @@ from mock import Mock, call, patch
 from yadt_commons.configuration import ConfigurationException, YadtConfigParser
 
 
+try:
+    import __builtin__
+    builtins_string = '__builtin__'
+except:
+    import builtins
+    builtins_string = 'builtins'
+
 class YadtConfigParserTests (unittest.TestCase):
     def test_should_create_instance_of_YadtConfigParser(self):
         parser = YadtConfigParser()
@@ -33,7 +40,7 @@ class YadtConfigParserTests (unittest.TestCase):
 
     @patch('yadt_commons.configuration.sys')
     @patch('yadt_commons.configuration.os.path.exists')
-    @patch('__builtin__.exit')
+    @patch(builtins_string + '.exit')
     def test_should_exit_when_configuration_file_does_not_exist(self, mock_exit, mock_exists, mock_log):
         mock_parser = Mock(YadtConfigParser)
         mock_exists.return_value = False
