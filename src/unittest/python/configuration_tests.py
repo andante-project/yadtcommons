@@ -1,5 +1,5 @@
 #   yadt_commons
-#   Copyright (C) 2012 Immobilien Scout GmbH
+#   Copyright (C) 2013 Immobilien Scout GmbH
 #
 #   This program is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -31,7 +31,6 @@ class YadtConfigParserTests (unittest.TestCase):
         name_of_type = parser._parser.__class__.__name__
         self.assertEqual('SafeConfigParser', name_of_type)
 
-
     @patch('yadt_commons.configuration.sys')
     @patch('yadt_commons.configuration.os.path.exists')
     @patch('__builtin__.exit')
@@ -43,7 +42,6 @@ class YadtConfigParserTests (unittest.TestCase):
 
         self.assertEqual(call('some.cfg'), mock_exists.call_args)
         self.assertEqual(call(1), mock_exit.call_args)
-
 
     @patch('yadt_commons.configuration.sys')
     @patch('yadt_commons.configuration.os.path.exists')

@@ -17,7 +17,10 @@
 import os
 import sys
 
-from ConfigParser import SafeConfigParser
+try:
+    from ConfigParser import SafeConfigParser
+except:
+    from configparser import SafeConfigParser
 
 
 class ConfigurationException (Exception):
