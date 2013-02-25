@@ -1,4 +1,4 @@
-#   yadt_commons
+#   yadtcommons
 #   Copyright (C) 2013 Immobilien Scout GmbH
 #
 #   This program is free software: you can redistribute it and/or modify

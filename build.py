@@ -45,6 +45,7 @@ def set_properties(project):
 
     project.get_property('filter_resources_glob').append('**/yadtcommons/__init__.py')
 
+
 @init(environments="teamcity")
 def set_properties_for_teamcity(project):
     import os
