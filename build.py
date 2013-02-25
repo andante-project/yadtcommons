@@ -31,8 +31,9 @@ authors = [Author('Marcel Wolf', 'marcel.wolf@immobilienscout24.de'),
            Author('Michael Gruber', 'aelgru@gmail.com')]
 license = 'GNU GPL v3'
 name = 'yadtcommons'
+summary = 'commons libary for YADT'
 url = 'https://github.com/yadt/yadtcommons'
-version = '0.0.1'
+version = '0.0.2'
 
 default_task = ['analyze', 'publish']
 
