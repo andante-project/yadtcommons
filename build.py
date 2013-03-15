@@ -33,7 +33,7 @@ license = 'GNU GPL v3'
 name = 'yadtcommons'
 summary = 'commons libary for YADT'
 url = 'https://github.com/yadt/yadtcommons'
-version = '0.0.3'
+version = '0.0.4'
 
 default_task = ['analyze', 'publish']
 
