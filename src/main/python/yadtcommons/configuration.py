@@ -106,5 +106,5 @@ class YadtConfigParser (object):
         if not os.path.exists(filename):
             raise ConfigurationException('Configuration file "%s" does not exist.' % filename)
 
-        sys.stdout.write('Loading configuration file "%s"' % filename)
+        sys.stdout.write('Loading configuration file "%s\n"' % filename)
         self._parser.read([filename])
