@@ -48,9 +48,8 @@ class YadtConfigParserTests (unittest.TestCase):
 
         self.assertEqual(call('some.cfg'), mock_exists.call_args)
 
-    @patch('yadtcommons.configuration.sys')
     @patch('yadtcommons.configuration.os.path.exists')
-    def test_should_read_configuration_file (self, mock_exists, mock_log):
+    def test_should_read_configuration_file (self, mock_exists):
         mock_parser = Mock(YadtConfigParser)
         mock_wrapped_parser = Mock()
         mock_parser._parser = mock_wrapped_parser
