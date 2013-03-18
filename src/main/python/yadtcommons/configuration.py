@@ -15,7 +15,7 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
-import sys
+import logging
 
 try:
     from ConfigParser import SafeConfigParser
@@ -106,5 +106,5 @@ class YadtConfigParser (object):
         if not os.path.exists(filename):
             raise ConfigurationException('Configuration file "%s" does not exist.' % filename)
 
-        sys.stdout.write('Loading configuration file "%s"\n' % filename)
+        logging.getLogger('configuration').info('Loading configuration file "%s"\n' % filename)
         self._parser.read([filename])
