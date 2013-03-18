@@ -19,7 +19,7 @@ import sys
 
 try:
     from ConfigParser import SafeConfigParser
-except:
+except:  # pragma: no cover
     from configparser import SafeConfigParser
 
 
